@@ -33,6 +33,8 @@ export default function Home() {
     setLoading(false);
   }
 
+  const GUMROAD_URL = 'https://roseljan.gumroad.com/l/rhubwe';
+
   return (
     <main style={{ minHeight: '100vh', background: '#0f172a', color: 'white', padding: '40px', textAlign: 'center' }}>
       <h1 style={{ fontSize: '36px', fontWeight: 'bold' }}>Alpha AI Video Studio</h1>
@@ -70,6 +72,41 @@ export default function Home() {
           </a>
         </div>
       )}
+
+      {/* Pricing Section */}
+      <section style={{ marginTop: '80px', maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto' }}>
+        <h2 style={{ fontSize: '28px', marginBottom: '32px' }}>Pricing</h2>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
+          <a href={GUMROAD_URL} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div style={{ background: '#1e293b', borderRadius: '12px', padding: '24px', width: '220px' }}>
+              <h3 style={{ fontSize: '20px' }}>Starter</h3>
+              <p style={{ fontSize: '32px', fontWeight: 'bold', margin: '12px 0' }}>$9<span style={{ fontSize: '14px' }}>/mo</span></p>
+              <p style={{ color: '#94a3b8', fontSize: '14px' }}>Get started with basic video generation</p>
+            </div>
+          </a>
+
+          <a href={GUMROAD_URL} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div style={{ background: '#1e293b', borderRadius: '12px', padding: '24px', width: '220px', border: '2px solid #3b82f6' }}>
+              <h3 style={{ fontSize: '20px' }}>Creator</h3>
+              <p style={{ fontSize: '32px', fontWeight: 'bold', margin: '12px 0' }}>$29<span style={{ fontSize: '14px' }}>/mo</span></p>
+              <p style={{ color: '#94a3b8', fontSize: '14px' }}>More generations, priority processing</p>
+            </div>
+          </a>
+
+          <a href={GUMROAD_URL} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div style={{ background: '#1e293b', borderRadius: '12px', padding: '24px', width: '220px' }}>
+              <h3 style={{ fontSize: '20px' }}>Pro</h3>
+              <p style={{ fontSize: '32px', fontWeight: 'bold', margin: '12px 0' }}>$49<span style={{ fontSize: '14px' }}>/mo</span></p>
+              <p style={{ color: '#94a3b8', fontSize: '14px' }}>Full access, unlimited priority support</p>
+            </div>
+          </a>
+        </div>
+
+        <p style={{ marginTop: '24px', color: '#94a3b8', fontSize: '14px' }}>
+          30-day money back guarantee on all plans.
+        </p>
+      </section>
     </main>
   );
 }
